@@ -1,0 +1,668 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+.logo {
+  color: white;
+}
+
+.nav {
+  width: 100vw;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: auto;
+  z-index: 10;
+  opacity: 0.9;
+  top: 0px;
+  position: fixed;
+  background-color: black;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  height: 100%;
+  margin-top: 0px;
+}
+
+.links .link {
+  margin: 20px 55px 10px 55px;
+  list-style: none;
+  font-weight: bold;
+  height: 100%;
+  color: white;
+}
+
+.links .link a {
+  text-decoration: none;
+  color: white;
+}
+
+.links .link a:hover {
+  color: white;
+  border-bottom: 3px solid white;
+  padding-bottom: 4px;
+  -webkit-animation-name: underliner;
+          animation-name: underliner;
+  -webkit-animation-duration: 150ms;
+          animation-duration: 150ms;
+}
+
+@-webkit-keyframes underliner {
+  0% {
+    border-bottom: 0px solid white;
+  }
+  100% {
+    border-bottom: 3px solid white;
+  }
+}
+
+@keyframes underliner {
+  0% {
+    border-bottom: 0px solid white;
+  }
+  100% {
+    border-bottom: 3px solid white;
+  }
+}
+
+.bars {
+  cursor: pointer;
+  height: 27.5px;
+  width: 34px;
+  padding-left: 8px;
+  padding-top: 5.75px;
+  border-radius: 50%;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  margin: 17.75px 5px 10px 5px;
+  margin-left: 10px;
+  margin-right: 40px;
+  display: none;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.bars:hover {
+  background-color: #606060FF;
+}
+
+.bars .bar {
+  width: 17.5px;
+  height: 1.5px;
+  background-color: white;
+  margin: 3px 0;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.user-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-options .login {
+  font-weight: bold;
+  height: 100%;
+  margin: 16px 45px 4px 17px;
+  padding: 7px 12.5px 11px 12.5px;
+  border-radius: 5px;
+  width: 65px;
+  height: 30px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  background-color: #606060FF;
+}
+
+.user-options .login a {
+  text-decoration: none;
+  color: white;
+}
+
+.user-options .login a:hover {
+  color: #D6ED17FF;
+}
+
+.user-options .login:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.user-options .logout {
+  font-weight: bold;
+  margin: 16px 45px 4px 17px;
+  padding: 7px 12.5px 11px 12.5px;
+  border-radius: 5px;
+  width: 72.5px;
+  height: 30px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  background-color: #606060FF;
+}
+
+.user-options .logout a {
+  text-decoration: none;
+  color: white;
+}
+
+.user-options .logout a:hover {
+  color: #D6ED17FF;
+}
+
+.user-options .logout:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.user-options .register {
+  font-weight: lighter;
+  font-size: 1rem;
+  height: 100%;
+  margin: 17px 5px 4px 47px;
+  padding: 4px 10px 6px 8px;
+  border-radius: 5px;
+  width: 55px;
+  height: 25px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.user-options .register a {
+  text-decoration: none;
+  color: white;
+}
+
+.user-options .register a:hover {
+  border-bottom: 1px solid white;
+}
+
+.user-options .name {
+  font-weight: lighter;
+  font-size: 1rem;
+  height: 100%;
+  margin: 17px 5px 4px 47px;
+  padding: 4px 10px 6px 8px;
+  border-radius: 5px;
+  width: 55px;
+  height: 25px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.user-options .name a {
+  text-decoration: none;
+  color: white;
+}
+
+.user-options .name a:hover {
+  border-bottom: 1px solid white;
+}
+
+footer {
+  background-color: black;
+  height: 20vh;
+  width: 100vw;
+  margin-bottom: 0px;
+  margin-top: auto;
+  color: white;
+}
+
+footer img {
+  border: white solid 0.2px;
+  background-color: white;
+  height: 12.5px;
+  width: 12.5px;
+}
+
+.shower {
+  display: none;
+}
+
+@media screen and (max-width: 670px) {
+  .bars {
+    display: block;
+  }
+  .nav .link-container .links {
+    display: none;
+  }
+  .ham-nav {
+    opacity: 1;
+    background-color: black;
+    height: 65px;
+  }
+  .ham-nav .link-container .links {
+    margin-top: 65px;
+    display: block;
+    position: absolute;
+    left: -10vw;
+  }
+  .ham-nav .link-container .links .link {
+    background-color: black;
+    text-align: center;
+    height: 8vh;
+    width: 102.5vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    left: 0px;
+    border-top: 4px solid white;
+    padding-top: 2vh;
+  }
+}
+
+.user-info {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 100px;
+  margin-bottom: 35px;
+}
+
+.user-info .img-container {
+  float: left;
+  height: 275px;
+  width: 225px;
+  overflow: hidden;
+  border: 4px solid white;
+  background-color: #606060FF;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  margin-right: 5vw;
+}
+
+.user-info .img-container img {
+  height: 95%;
+  width: 95%;
+  border-radius: 10px;
+}
+
+.user-info .user-name {
+  font-size: 2rem;
+  color: black;
+  font-weight: bolder;
+}
+
+.user-info .descrip {
+  padding-top: 20px;
+  height: 250px;
+  background-color: #606060FF;
+}
+
+.user-info .descrip p {
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.user-info .descrip .edit-info-btn {
+  background-color: #606060FF;
+  -webkit-box-shadow: 0px 0.5px 2px black;
+          box-shadow: 0px 0.5px 2px black;
+  width: 74px;
+  height: 24px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0px 100px 10px auto;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.user-info .descrip .edit-info-btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0px 2px 5px black;
+          box-shadow: 0px 2px 5px black;
+}
+
+.user-info .descrip .edit-info-btn a {
+  text-decoration: none;
+  color: #D6ED17FF;
+  font-weight: lighter;
+  font-size: 1.25rem;
+}
+
+.cart-products {
+  min-height: 100px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.cart-products h4 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+
+.cart-products table {
+  width: 90vw;
+  border-collapse: collapse;
+}
+
+.cart-products table .title-row {
+  background-color: black;
+}
+
+.cart-products table .title-row th {
+  text-align: left;
+  border-collapse: collapse;
+  border-bottom: 3px solid white;
+  color: #606060FF;
+  font-weight: bolder;
+}
+
+.cart-products table .cart-item {
+  background-color: #606060FF;
+  border-bottom: 2px solid white;
+}
+
+.cart-products table .cart-total {
+  background-color: black;
+}
+
+.cart-products table .cart-total td {
+  border-top: 3px solid #606060FF;
+  color: #606060FF;
+  font-weight: bolder;
+}
+
+.cart-products .item-quantity input[type='number'] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.cart-products .item-quantity input[type='number']:focus {
+  color: #D6ED17FF;
+  border-bottom: 2px solid #D6ED17FF;
+}
+
+.cart-products .item-quantity input[type=number]::-webkit-inner-spin-button,
+.cart-products .item-quantity input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.cart-products .cart-btn {
+  cursor: pointer;
+  background-color: #606060FF;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  height: 22.5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  color: white;
+}
+
+.cart-products .cart-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #D6ED17FF;
+}
+
+.cart-products .cart-btn:active {
+  outline: none;
+}
+
+.pending-items {
+  min-height: 100px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.pending-items h4 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+
+.pending-items table {
+  width: 90vw;
+  border-collapse: collapse;
+}
+
+.pending-items table .title-row {
+  background-color: black;
+}
+
+.pending-items table .title-row th {
+  text-align: left;
+  border-collapse: collapse;
+  border-bottom: 3px solid white;
+  color: #606060FF;
+  font-weight: bolder;
+}
+
+.pending-items table .pending-item {
+  background-color: #606060FF;
+  border-bottom: 2px solid white;
+}
+
+.pending-items table .pending-total {
+  background-color: black;
+}
+
+.pending-items table .pending-total td {
+  border-top: 3px solid white;
+  color: #606060FF;
+  font-weight: bolder;
+}
+
+.delivered-items {
+  min-height: 100px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.delivered-items h4 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+
+.delivered-items table {
+  width: 90vw;
+  border-collapse: collapse;
+}
+
+.delivered-items table .title-row {
+  background-color: black;
+}
+
+.delivered-items table .title-row th {
+  text-align: left;
+  border-collapse: collapse;
+  border-bottom: 3px solid white;
+  color: #606060FF;
+  font-weight: bolder;
+}
+
+.delivered-items table .delivered-item {
+  background-color: #606060FF;
+  border-bottom: 2px solid white;
+}
+
+.delivered-items table .delivered-total {
+  background-color: black;
+}
+
+.delivered-items table .delivered-total td {
+  border-top: 3px solid white;
+  color: #606060FF;
+  font-weight: bolder;
+}
+
+.mess {
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid red;
+  padding: 10px;
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.delete-button {
+  cursor: pointer;
+  background-color: red;
+  margin-right: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  text-align: center;
+  height: 18.75px;
+  border-radius: 5px;
+  color: white;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  max-width: 5vw;
+  min-width: 50px;
+}
+
+.delete-button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.dont-delete {
+  cursor: pointer;
+  width: 20vw;
+  background-color: green;
+  text-align: center;
+  color: white;
+  border-radius: 6px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  margin-right: 0px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.dont-delete:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.do-delete {
+  width: 20vw;
+  background-color: red;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  margin-right: 0px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.do-delete:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.show-animation {
+  -webkit-animation-name: shower;
+          animation-name: shower;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+}
+
+@-webkit-keyframes shower {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+@keyframes shower {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+.delete-btn {
+  max-width: 20vw;
+}
+
+@media screen and (max-width: 530px) {
+  .edit-info-btn {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  .cart-products table {
+    width: 80vw;
+  }
+  .cart-products table .cart-item .item-quantity input {
+    width: 100px;
+  }
+  .pending-items table {
+    width: 87.5vw;
+  }
+  .delivered-items table {
+    width: 87.5vw;
+  }
+}
+
+@media screen and (max-width: 474px) {
+  .edit-info-btn {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px);
+  }
+}
+/*# sourceMappingURL=user-info.css.map */

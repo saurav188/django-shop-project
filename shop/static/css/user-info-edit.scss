@@ -1,0 +1,95 @@
+@import './style.scss';
+
+
+.registration-form{
+    margin-top: 65px;
+    padding-left: $padding_length;
+    padding-right: $padding_length;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3{
+        margin-right: 50px;
+        font-size: 2rem;
+        font-weight: bolder;
+        color: $title_color;
+    }
+    label{
+        color: $title_color;
+        font-size: 1rem;
+    }
+    input[type=text],input[type=password],input[type=number]{
+        border: none;
+        width: 225px;
+        height: 25px;
+        background-color: transparent;
+        border-bottom:1px solid black;
+
+
+            &:focus{
+                color: $nav_bg;
+                border-bottom:3px solid $nav_bg;
+                padding-bottom: 3px;
+                animation-name: underliner;
+                animation-duration: 350ms;
+            }
+    }
+    input[type=submit]{
+        cursor: pointer;
+        width: 100px;
+        height: 25px;
+        border: none;
+        font-weight: bolder;
+        border: 2px solid $bg;
+        color: $nav_bg;
+        background-color: $bg2;
+        border-radius: 12px;
+        transition: 250ms;
+        margin-left: 20%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+        &:hover{
+            transform: scale(1.15);
+            background-color: $nav_bg;
+            color: $title_color;
+        }
+    }
+}
+textarea:focus, input:focus{
+    outline: none;
+
+}
+
+@keyframes underliner{
+    0%{border-bottom: 0px solid $nav_bg;}
+    100%{border-bottom: 3px solid $nav_bg;}
+}
+
+.change-password{
+    margin-bottom: 40px;
+    margin-right: 100px;
+
+    a{
+        text-decoration: none;
+        color: $title_color;
+
+        &:hover{
+            border-bottom: 1px solid $title_color;
+        }
+    }
+}
+
+.messages{
+    position: absolute;
+    top: 30vh;
+    left: 70vw;
+    border: 1px solid rgb(236, 40, 40);
+    padding: 5vh 1vw 5vh 1vw;
+    
+    li{
+        list-style: none;
+        color: rgb(236, 40, 40);
+    }
+}

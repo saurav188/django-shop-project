@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block content %}
-<!--     <div class="description">
+    <div class="description">
         <div class="img-contain">
             <img class="product-img" src="{{product.image.url}}" alt="product img" srcset="">
         </div>
@@ -31,13 +31,8 @@
             {% endfor %}
         {% endif %}
         <p class="product-des"> {{product.produuct_description}}</p>
-        <div class="images">
-            {% for img in des_img %}
-                <img src="{{img.image.url}}" alt="" srcset="">
-            {% endfor %}
-        </div>
     </div>
-    <div class="reviews">
+    <!--<div class="reviews">
         
         <h3 class="review-title">Reviews</h3>   
 

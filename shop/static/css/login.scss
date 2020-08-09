@@ -1,0 +1,74 @@
+@import './style.scss';
+
+
+.login-container{
+    background-color:$bg2;
+    width: 350px;
+    height: 200px;
+    margin: auto;
+    margin-top: 26.7vh;
+    border-radius: 15px;
+    margin-bottom: 50px;
+
+        label{
+            color: $title_color;
+            font-size: 1rem;
+            margin-left: 20px;
+        }
+        input[type=text],input[type=password]{
+            border: none;
+            width: 225px;
+            height: 25px;
+            background-color: transparent;
+            border-bottom:1px solid black;
+            margin: 25px 0px 0px 0px;
+
+                &:focus{
+                    color: $title_color;
+                    border-bottom:3px solid $title_color;
+                    padding-bottom: 3px;
+                    animation-name: underliner;
+                    animation-duration: 350ms;
+                }
+        }
+        input[type=submit]{
+            cursor: pointer;
+            width: 100px;
+            height: 25px;
+            border: none;
+            font-weight: bolder;
+            color: $bg;
+            background-color:$bg2;
+            box-shadow: 0px 0.2px 2px $nav_bg;
+            border-radius: 12px;
+            transition: 250ms;
+            margin-left: 125px;
+            margin-top: 10px;
+            margin-bottom: 50px;
+
+            &:hover{
+                transform: scale(1.15);
+                color: $title_color;
+                box-shadow: 0px 1px 4px $nav_bg;
+            }
+        }
+
+        textarea:focus, input:focus{
+        outline: none;
+
+        }
+}
+.create{
+    width: 131.25px;
+    margin-left: auto;
+    margin-right: auto;
+
+    a{
+        text-decoration: none;
+        color: $nav_bg;
+
+        &:hover{
+            border-bottom: $nav_bg solid 1px;
+        }
+    }
+}

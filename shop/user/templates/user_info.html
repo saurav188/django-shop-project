@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>{{user.first_name}} {{user.last_name}}</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/user-info.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="user-info">
+        <div class="img-container">
+            {% if profile.profile_picture %}
+                <img src="{{profile.profile_picture.url}}" alt="" srcset="">
+            {% endif %}
+        </div>
+        <h3 class="user-name">{{profile.first_name}} {{profile.last_name}}</h3>
+        <div class="descrip">
+            <p>User Name:{{profile.username}}</p>
+            <p>Email:    {{profile.email}}</p>
+            <p>Phone No: {{profile.phone_no}}</p><br><br>
+            <div class="edit-info-btn">
+                <a href="/user/edituserinfo">Edit</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- {% if messages %}
+        {% for message in messages %}
+            <div class="mess">{{message}}</div>
+        {% endfor %}
+    {% endif %}
+
+    {% if cart_items %}
+        <div class="cart-products">
+            <form action="" method="POST" id="change">{% csrf_token %}</form>
+            <form action="" method="POST" id="order">{% csrf_token %}</form>
+                <h4 class="cart-title">Cart:</h4>
+                <table>
+                    <tr class="title-row">
+                        <th>S.No</th>
+                        <th>Name of the product</th>
+                        <th>Price per unit</th>
+                        <th>No of unit</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    {% for item in cart_items %}
+                            <tr class="cart-item">
+                                <td class="cart-serial-no"></td>
+                                <td>{{item.product.product_name}}</td>
+                                <td class="item-price">{{item.product.price}}</td>
+                                <td class="item-quantity">
+                                    {% csrf_token %}
+                                    <input type="number" name="item_qtn" value="{{item.quantity}}" id="{{item.id}}" form="change">
+
+                                </td>
+                                <td class="tot-price"></td>
+                                <td class="status">{{item.status}}</td>
+                                <td class="delete-btn">
+                                    <div class="delete-button">Del</div>
+                                    <div class="dont-delete hidden">No</div>
+                                    <form action="" method="POST" id="delete{{item.id}}">{% csrf_token %}</form>
+                                        {% csrf_token %}
+                                        <input type="hidden" name="delete-value" value="{{item.id}}" form="delete{{item.id}}">
+                                        <input type="hidden" name="order-value" value="{{item.id}}" form="order">
+                                        <input type="submit" class="do-delete hidden" name="btn" value="Yes" form="delete{{item.id}}">
+                                </td>
+                            </tr>
+                    {% endfor %}
+                    <tr class="cart-total">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="tot-item-quantity">Total items:</td>
+                        <td class="tot-price">Total price:</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                {% csrf_token %}
+                <input type="submit" name="btn" value="Save Changes" form="change" class="cart-btn"><br>
+                <input type="submit" name="btn" value="Place Order" form="order" class="cart-btn">
+        </div>
+    {% endif %}
+
+    {% if pending_items %}
+        <div class="pending-items">
+            <h4 class="cart-title">Pending:</h4>
+                <table>
+                    <tr class="title-row">
+                        <th>S.No</th>
+                        <th>Name of the product</th>
+                        <th>Price per unit</th>
+                        <th>No of unit</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    {% for item in pending_items %}
+                        <tr class="pending-item">
+                            <td class="pending-serial-no"></td>
+                            <td>{{item.product.product_name}}</td>
+                            <td class="item-price">{{item.product.price}}</td>
+                            <td class="item-quantity">{{item.quantity}}</td>
+                            <td class="pending-tot-price"></td>
+                            <td class="status">{{item.status}}</td>
+                            <td class="delete-btn">
+                                <div class="delete-button">Cancel</div>
+                                <div class="dont-delete hidden">No</div>
+                                <form action="" method="POST" id="delete{{item.id}}">{% csrf_token %}</form>
+                                    {% csrf_token %}
+                                    <input type="hidden" name="delete-value" value="{{item.id}}" form="delete{{item.id}}">
+                                    <div class="hidden"></div>
+                                    <input type="submit" class="do-delete hidden" name="btn" value="Yes" form="delete{{item.id}}">
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    <tr class="pending-total">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="atot-item-quantity">Total items:</td>
+                        <td class="atot-price">Total price:</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+        </div>
+    {% endif %}
+
+    {% if delivered_items %}
+    <div class="delivered-items">
+        <h4 class="cart-title">Delivered:</h4>
+            <table>
+                <tr class="title-row">
+                    <th>S.No</th>
+                    <th>Name of the product</th>
+                    <th>Price per unit</th>
+                    <th>No of unit</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </tr>
+                {% for item in delivered_items %}
+                    <tr class="delivered-item">
+                        <td class="delivered-serial-no"></td>
+                        <td>{{item.product.product_name}}</td>
+                        <td class="item-price">{{item.product.price}}</td>
+                        <td class="item-quantity">{{item.quantity}}</td>
+                        <td class="pending-tot-price"></td>
+                        <td class="status">{{item.status}}</td>
+                    </tr>
+                {% endfor %}
+                <tr class="delivered-total">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total items:</td>
+                    <td>Total price:</td>
+                    <td></td>
+                </tr>
+            </table>
+    </div>
+{% endif %} -->
+
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'js/userinfo.js' %}"></script>
+{% endblock %}

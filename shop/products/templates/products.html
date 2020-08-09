@@ -28,7 +28,7 @@
                 <div class="decoration"></div>
                 <h3>{{product.product_name}}</h3>
                 <p><span class="price">{{product.price}}</span></p>
-                <a  href="/product/{{product.id}}" class="buy-now-btn">More info</a>
+                <a  href="/product/product_id={{product.id}}" class="buy-now-btn">More info</a>
                 <div class="add-to-cart">
                     <form action="" method="POST">
                         {% csrf_token %}

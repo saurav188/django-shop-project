@@ -1,0 +1,353 @@
+@import './style.scss';
+
+
+.user-info{
+    padding-left: $padding_length;
+    padding-right: $padding_length;
+    margin-top: 100px;
+    margin-bottom: 35px;
+
+    .img-container{
+        float: left;
+        height: 275px;
+        width: 225px;
+        overflow: hidden;
+        border: 4px solid $bg;
+        background-color: $bg2;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 300ms;
+        margin-right: 5vw;
+
+        img{
+            height: 95%;
+            width: 95%;
+            border-radius: 10px;
+        }
+    }
+
+    .user-name{
+        font-size: 2rem;
+        color: $nav_bg;
+        font-weight: bolder;
+    }
+    .descrip{
+        padding-top: 20px;
+        height: 250px;
+        background-color: $bg2;
+
+        p{
+            font-size: 1rem;
+            font-weight: lighter;
+            margin-left: 25px;
+            margin-top: 25px;
+        }
+
+        .edit-info-btn{
+            background-color: $bg2;
+            box-shadow: 0px 0.5px 2px black;
+            width: 74px;
+            height: 24px;
+            border-radius:10px ;
+            text-align: center;
+            margin: 0px 100px 10px auto;
+            transition: 200ms;
+
+            &:hover{
+                transform: scale(1.05);
+                box-shadow: 0px 2px 5px black;
+            }
+
+            a{
+                text-decoration: none;
+                color: $title_color;
+                font-weight: lighter;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+.cart-products{
+    min-height: 100px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    padding-right: $padding_length;
+    padding-left: $padding_length;
+
+    h4{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        font-weight: lighter;
+    }
+
+    table{
+        width: 90vw;
+        border-collapse: collapse;
+
+        .title-row{
+            background-color: $nav_bg;
+
+            th{
+                text-align: left;
+                border-collapse: collapse;
+                border-bottom: 3px solid $bg;
+                color: $bg2;
+                font-weight: bolder;
+            }
+        }
+
+        .cart-item{
+            background-color: $bg2;
+            border-bottom: 2px solid $bg;
+        }
+
+        .cart-total{
+            background-color: $nav_bg;
+
+            td{
+                border-top: 3px solid $bg2;
+                color: $bg2;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .item-quantity{
+        input[type='number']{
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid black;
+            transition: 200ms;
+
+            &:focus{
+                color: $title_color;
+                border-bottom: 2px solid $title_color;
+            }
+        }
+
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none;
+        }
+    }
+
+    
+    .cart-btn{
+        cursor: pointer;
+        background-color: $bg2;
+        border: none;
+        margin-top: 10px;
+        border-radius: 5px;
+        height: 22.5px;
+        transition: 300ms;
+        color: $bg;
+
+        &:hover{
+            transform: scale(1.1);;
+            color: $title_color;
+        }
+
+        &:active{
+            outline: none;
+        }
+    }
+}
+.pending-items{
+    min-height: 100px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    padding-right: $padding_length;
+    padding-left: $padding_length;
+
+    h4{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        font-weight: lighter;
+    }
+
+    table{
+        width: 90vw;
+        border-collapse: collapse;
+
+        .title-row{
+            background-color: $nav_bg;
+
+            th{
+                text-align: left;
+                border-collapse: collapse;
+                border-bottom: 3px solid $bg;
+                color: $bg2;
+                font-weight: bolder;
+            }
+        }
+
+        .pending-item{
+            background-color: $bg2;
+            border-bottom: 2px solid $bg;
+        }
+
+        .pending-total{
+            background-color: $nav_bg;
+
+            td{
+                border-top: 3px solid $bg;
+                color: $bg2;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+.delivered-items{
+    min-height: 100px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    padding-right: $padding_length;
+    padding-left: $padding_length;
+
+    h4{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        font-weight: lighter;
+    }
+
+    table{
+        width: 90vw;
+        border-collapse: collapse;
+
+        .title-row{
+            background-color: $nav_bg;
+
+            th{
+                text-align: left;
+                border-collapse: collapse;
+                border-bottom: 3px solid $bg;
+                color: $bg2;
+                font-weight: bolder;
+            }
+        }
+
+        .delivered-item{
+            background-color: $bg2;
+            border-bottom: 2px solid $bg;
+        }
+
+        .delivered-total{
+            background-color: $nav_bg;
+
+            td{
+                border-top: 3px solid $bg;
+                color: $bg2;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+.mess{
+    margin-left: $padding_length;
+    margin-right: $padding_length;
+    border: 1px solid red;
+    padding: 10px;
+    color: red;
+}
+.hidden{
+    display: none;
+}
+.delete-button{
+    cursor: pointer;
+    background-color: red;
+    margin-right: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-align: center;
+    height: 18.75px;
+    border-radius: 5px;
+    color: white;
+    transition: 200ms;
+    max-width: 5vw;
+    min-width: 50px;
+
+    &:hover{
+        transform: scale(1.1);;
+    }
+}
+.dont-delete{
+    cursor: pointer;
+    width: 20vw;
+    background-color: green;
+    text-align: center;
+    color: white;
+    border-radius: 6px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    margin-right: 0px;
+    transition: 300ms;
+    
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+.do-delete{
+    width: 20vw;
+    background-color: red;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    margin-bottom:3px;
+    margin-top:3px;
+    margin-right: 0px;
+    transition: 300ms;
+        
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+.show-animation{
+    animation-name: shower;
+    animation-duration: 400ms;
+}
+@keyframes shower{
+    0%{width: 0vw;}
+    100%{width: 20vw;}
+}
+.delete-btn{
+    max-width: 20vw;
+}
+
+@media screen and (max-width:530px){
+    .edit-info-btn{
+        transform: translateY(-40px);
+    }
+    .cart-products{
+        table{
+            width: 80vw;
+
+            .cart-item{
+                .item-quantity{
+                    input{
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+    .pending-items{
+        table{
+            width: 87.5vw;
+        }
+    }
+    .delivered-items{
+        table{
+            width: 87.5vw;
+        }
+    }
+}
+
+@media screen and (max-width:474px){
+    .edit-info-btn{
+        transform: translateY(-90px);
+    }
+}

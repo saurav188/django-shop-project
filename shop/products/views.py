@@ -24,8 +24,9 @@ def home(request):
     }
     return render(request,'home.html',context)
 
-def product(request,pk):
+def product_view(request,pk):
     context={
+        "product":product.objects.get(id=pk)
     }
     return render(request,'product.html',context)
 
