@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>
+        {{product.product_name}}
+    </title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/product.css' %}">
+{% endblock %}
+
+{% block content %}
+<!--     <div class="description">
+        <div class="img-contain">
+            <img class="product-img" src="{{product.image.url}}" alt="product img" srcset="">
+        </div>
+        <h3 class="product-title"> {{product.product_name}}</h3>
+        <p class="price">Price: {{product.price}}</p>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="quantity-product">Quantity:</label>
+            <input type="number" name="quantity-product" class="quantity-product">
+            <input type="hidden" name="product-id-value" value="{{product.id}}">
+            <input type="submit" name="btn" value="Add to Cart">
+        </form>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="mess">{{message}}</div>
+            {% endfor %}
+        {% endif %}
+        <p class="product-des"> {{product.produuct_description}}</p>
+        <div class="images">
+            {% for img in des_img %}
+                <img src="{{img.image.url}}" alt="" srcset="">
+            {% endfor %}
+        </div>
+    </div>
+    <div class="reviews">
+        
+        <h3 class="review-title">Reviews</h3>   
+
+        {% if order_placed %}
+            {% if this_review %}
+                <h5>{{user.first_name}} {{user.last_name}}</h5>
+                <form class='review-form' action="" method="POST">
+                    {% csrf_token %}
+                        <input type="radio" id="Very Bad" name="score" value="Very Bad">
+                            <label for="Very Bad">Very Bad</label>
+                        <input type="radio" id="Bad" name="score" value="Bad">
+                            <label for="Bad">Bad</label>
+                        <input type="radio" id="Good Enough" name="score" value="Good Enough">
+                            <label for="Good Enough">Good Enough</label>
+                        <input type="radio" id="Good" name="score" value="Good">
+                            <label for="Good">Good</label>
+                        <input type="radio" id="Amazing" name="score" value="Amazing">
+                            <label for="Amazing">Amazing</label>
+                        <textarea name="comment" id="comment" cols="112.5" rows="10">{{this_review.comment}}</textarea><br>
+                        <input type="submit" name='btn' value="Edit Review">
+                </form>
+            {% else %}
+                <h5>{{user.first_name}} {{user.last_name}}</h5>
+                <form class='review-form' action="" method="POST">
+                    {% csrf_token %}
+                        <input type="radio" id="Very Bad" name="score" value="Very Bad">
+                            <label for="Very Bad">Very Bad</label>
+                        <input type="radio" id="Bad" name="score" value="Bad">
+                            <label for="Bad">Bad</label>
+                        <input type="radio" id="Good Enough" name="score" value="Good Enough" checked>
+                            <label for="Good Enough">Good Enough</label>
+                        <input type="radio" id="Good" name="score" value="Good">
+                            <label for="Good">Good</label>
+                        <input type="radio" id="Amazing" name="score" value="Amazing">
+                            <label for="Amazing">Amazing</label>
+                        <textarea name="comment" id="comment" cols="112.5" rows="10">Your reviw here..</textarea><br>
+                        <input type="submit" name='btn' value="Post Review">
+                </form>
+            {% endif %}
+            <hr class="review-divider">
+        {% endif %}
+
+        {% for review in reviews %} 
+              <div class="review">
+                  <h4>{{review.score}}</h4>
+                  <h6>-by {{review.reviewer.user.first_name}} {{review.reviewer.user.last_name}}</h6>
+                  <p>{{review.comment}}</p>
+              </div>
+        {% endfor %}       
+    </div> -->
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

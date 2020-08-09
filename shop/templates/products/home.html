@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>this is title</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="slide-container">
+<!--         {% for banner in banners %}
+                <img class="slides" src="{{banner.banner.url}}" alt="banner" id="img{{banner.id}}" data-no={{banner.id}}>
+        {% endfor %} -->
+    </div>
+    <div class="row">
+<!--         {% for banner in banners %}
+        <div id="dot{{banner.id}}" class="dot dark" data-no="{{banner.id}}"></div>
+        {% endfor %} -->
+    </div>
+    <h2 class="popular-title">Products</h2>
+    <div class="popular-product-card-container">
+ <!--        {% for product in products %}
+                <div class="product-card">
+                    <img src="{{product.image.url}}"  class='product-card-img' alt="product image" srcset="">
+                    <div class="decoration"></div>
+                    <h3>{{product.product_name}}</h3>
+                    <p><span class="price">{{product.price}}</span></p>
+                    <a  href="/product/{{product.id}}" class="buy-now-btn">More info</a>
+                    <div class="add-to-cart">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <button type="submit" value="{{product.id}}" name="product_id">
+                                <img src="{% static 'img/shopping-cart.png' %}" alt="">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+        {% endfor %} -->
+        <div class="more-container">
+            <a class="more-product" href="/products/1/">More Products</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
