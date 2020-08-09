@@ -1,0 +1,54 @@
+@import './style.scss';
+
+.popular-title{
+    background-color: $bg2;
+    margin-top: 130px;
+    margin-bottom: 0px;
+    padding: 25px 5% 10px 5%;
+    color: $title_color;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    opacity: 0.8;
+    background-color:$bg2;
+    position: fixed;
+    top: 65px;
+    z-index: 10;
+    color: $title_color;
+
+    a{
+        width: 45px;
+        padding: 0px 9px 0px 9px;
+        border-radius: 4px;
+        color: $nav_bg;
+        text-decoration: none;
+        transition: 200ms;
+        color: $title_color;
+
+        &:hover{
+            background-color: $nav_bg;
+        }
+    }
+    .prev-btn{
+        margin-right:5px ;
+    }
+    .next-btn{
+        margin-left:5px ;
+    }
+}
+
+.hider{
+    display: none;
+}
+
+
+@media screen and (max-width:670px){
+    .btn-container{
+        top: 57.5px;
+    }
+}

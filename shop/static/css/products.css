@@ -1,0 +1,345 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+.logo {
+  color: white;
+}
+
+.nav {
+  width: 100vw;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: auto;
+  z-index: 10;
+  opacity: 0.9;
+  top: 0px;
+  position: fixed;
+  background-color: black;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  height: 100%;
+  margin-top: 0px;
+}
+
+.links .link {
+  margin: 20px 55px 10px 55px;
+  list-style: none;
+  font-weight: bold;
+  height: 100%;
+  color: white;
+}
+
+.links .link a {
+  text-decoration: none;
+  color: white;
+}
+
+.links .link a:hover {
+  color: white;
+  border-bottom: 3px solid white;
+  padding-bottom: 4px;
+  -webkit-animation-name: underliner;
+          animation-name: underliner;
+  -webkit-animation-duration: 150ms;
+          animation-duration: 150ms;
+}
+
+@-webkit-keyframes underliner {
+  0% {
+    border-bottom: 0px solid white;
+  }
+  100% {
+    border-bottom: 3px solid white;
+  }
+}
+
+@keyframes underliner {
+  0% {
+    border-bottom: 0px solid white;
+  }
+  100% {
+    border-bottom: 3px solid white;
+  }
+}
+
+.bars {
+  cursor: pointer;
+  height: 27.5px;
+  width: 34px;
+  padding-left: 8px;
+  padding-top: 5.75px;
+  border-radius: 50%;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  margin: 17.75px 5px 10px 5px;
+  margin-left: 10px;
+  margin-right: 40px;
+  display: none;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.bars:hover {
+  background-color: #606060FF;
+}
+
+.bars .bar {
+  width: 17.5px;
+  height: 1.5px;
+  background-color: white;
+  margin: 3px 0;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.user-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-options .login {
+  font-weight: bold;
+  height: 100%;
+  margin: 16px 45px 4px 17px;
+  padding: 7px 12.5px 11px 12.5px;
+  border-radius: 5px;
+  width: 65px;
+  height: 30px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  background-color: #606060FF;
+}
+
+.user-options .login a {
+  text-decoration: none;
+  color: white;
+}
+
+.user-options .login a:hover {
+  color: #D6ED17FF;
+}
+
+.user-options .login:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.user-options .logout {
+  font-weight: bold;
+  margin: 16px 45px 4px 17px;
+  padding: 7px 12.5px 11px 12.5px;
+  border-radius: 5px;
+  width: 72.5px;
+  height: 30px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  background-color: #606060FF;
+}
+
+.user-options .logout a {
+  text-decoration: none;
+  color: white;
+}
+
+.user-options .logout a:hover {
+  color: #D6ED17FF;
+}
+
+.user-options .logout:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.user-options .register {
+  font-weight: lighter;
+  font-size: 1rem;
+  height: 100%;
+  margin: 17px 5px 4px 47px;
+  padding: 4px 10px 6px 8px;
+  border-radius: 5px;
+  width: 55px;
+  height: 25px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.user-options .register a {
+  text-decoration: none;
+  color: white;
+}
+
+.user-options .register a:hover {
+  border-bottom: 1px solid white;
+}
+
+.user-options .name {
+  font-weight: lighter;
+  font-size: 1rem;
+  height: 100%;
+  margin: 17px 5px 4px 47px;
+  padding: 4px 10px 6px 8px;
+  border-radius: 5px;
+  width: 55px;
+  height: 25px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.user-options .name a {
+  text-decoration: none;
+  color: white;
+}
+
+.user-options .name a:hover {
+  border-bottom: 1px solid white;
+}
+
+footer {
+  background-color: black;
+  height: 20vh;
+  width: 100vw;
+  margin-bottom: 0px;
+  margin-top: auto;
+  color: white;
+}
+
+footer img {
+  border: white solid 0.2px;
+  background-color: white;
+  height: 12.5px;
+  width: 12.5px;
+}
+
+.shower {
+  display: none;
+}
+
+@media screen and (max-width: 670px) {
+  .bars {
+    display: block;
+  }
+  .nav .link-container .links {
+    display: none;
+  }
+  .ham-nav {
+    opacity: 1;
+    background-color: black;
+    height: 65px;
+  }
+  .ham-nav .link-container .links {
+    margin-top: 65px;
+    display: block;
+    position: absolute;
+    left: -10vw;
+  }
+  .ham-nav .link-container .links .link {
+    background-color: black;
+    text-align: center;
+    height: 8vh;
+    width: 102.5vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    left: 0px;
+    border-top: 4px solid white;
+    padding-top: 2vh;
+  }
+}
+
+.popular-title {
+  background-color: #606060FF;
+  margin-top: 130px;
+  margin-bottom: 0px;
+  padding: 25px 5% 10px 5%;
+  color: #D6ED17FF;
+}
+
+.btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 10vh;
+  opacity: 0.8;
+  background-color: #606060FF;
+  position: fixed;
+  top: 65px;
+  z-index: 10;
+  color: #D6ED17FF;
+}
+
+.btn-container a {
+  width: 45px;
+  padding: 0px 9px 0px 9px;
+  border-radius: 4px;
+  color: black;
+  text-decoration: none;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  color: #D6ED17FF;
+}
+
+.btn-container a:hover {
+  background-color: black;
+}
+
+.btn-container .prev-btn {
+  margin-right: 5px;
+}
+
+.btn-container .next-btn {
+  margin-left: 5px;
+}
+
+.hider {
+  display: none;
+}
+
+@media screen and (max-width: 670px) {
+  .btn-container {
+    top: 57.5px;
+  }
+}
+/*# sourceMappingURL=products.css.map */

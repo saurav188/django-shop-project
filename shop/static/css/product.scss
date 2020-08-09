@@ -1,0 +1,205 @@
+@import './style.scss';
+
+.description{
+    margin-top: 65px;
+    padding: $padding_length;
+    .img-contain{
+        width: 400px;
+        height:500px;
+        overflow: hidden;
+        float: left;
+        padding: 10px;
+
+        .product-img{
+            width: 300px;
+            height: auto;
+        
+        }
+    }
+    .product-title{
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    .price{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    form{
+        label{
+            color: $nav_bg;
+            font-weight: bolder;
+        }
+        input[type='number']{
+            border: none;
+            border-bottom: 1px solid $nav_bg;
+            transition: 300ms;
+            background-color: $bg;
+            border-bottom: 1px solid $bg2;
+            transition: 200ms;
+
+            &:focus{
+                border-bottom:2px solid $bg2;
+            }
+        }
+        input[type='submit']{
+            cursor: pointer;
+            background-color:$bg2;
+            height: 25px;
+            border: none;
+            border-radius: 10px;
+            color: $title_color;
+            font-weight: bold;
+            margin-left: 10px;
+            transition: 300ms;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .mess{
+        border: 1px solid red;
+        color: red;
+        width: 600px;
+        height: 40px;
+        padding: 10px;
+        margin-left: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .product-des{
+        font-size: 1rem;
+        font-weight: lighter;
+    }
+    .images{
+        margin: 5vh 5vw 5vh 5vw;
+        padding: 5vh 5vw 5vh 5vw;
+
+        img{
+            margin-bottom: 5vh;
+            width: 70vw;
+            height:auto;
+        }
+    }
+}
+.reviews{
+    padding: 5vh 5vw 5vh 5vw;
+    width: 90vw;
+    min-height: 20vh;
+    margin: $padding_length;
+    border:1px solid $bg2;
+
+    .review-title{
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .review-form{
+        width:80vw;
+        background-color: $bg2;
+        padding: 2.5% 5% 2.5% 5%;
+        margin-bottom: 25px;
+
+        input[type='radio']{
+            &:checked{
+                color: $title_color;
+            }
+        }
+
+        label{
+            cursor: pointer;
+            color: $title_color;
+            margin-right: 10px;
+            padding: 8px;
+            border-radius: 5px;
+
+            &:hover{
+                background-color: $bg2;
+            }
+
+        }
+
+        textarea{
+            border: 0.2px solid $title_color;
+            background-color: $bg2;
+            width: 72.5vw;
+            max-width: 72.5vw;
+            min-width: 72.5vw;
+            min-height: 75px;
+            height: 75px;
+            margin-top: 20px;
+        }
+
+        input[type='submit']{
+            cursor: pointer;
+            border: none;
+            background-color: $bg2;
+            color: $title_color;
+            padding: 7.5px;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: 200ms;
+
+            &:hover{
+                transform: scale(1.05);
+                box-shadow: 0px 2px 5px $nav_bg;
+            }
+        }
+    }
+
+    .review{
+        width:80vw;
+        background-color: $bg2;
+        padding: 2.5% 5% 2.5% 5%;
+        margin-bottom: 25px;
+
+        h4{
+            margin-bottom: 0px;
+            color: $title_color;
+            font-weight: lighter;
+        }
+        h6{
+            font-weight: bold;
+            margin-top: 0px;
+            margin-left: 10px;
+        }
+        p{
+            border:0.2px solid $title_color;
+            padding: 1%;
+        }
+    }
+}
+
+.review-divider{
+    width: 80vw;
+    height: 3px;
+    color: black;
+    background-color: black;
+    border-color: black;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width:700px){
+    .description{
+        margin-top: 65px;
+        padding: $padding_length;
+        .img-contain{
+            width: 400px;
+            height:300px;
+        }
+        form{
+            label{
+                margin-top: 10px;
+            }
+            input[type='number']{
+                margin-top: 5px;
+            }
+            input[type='submit']{
+                margin-top: 5px;
+            }
+        }
+        .mess{
+            width: 300px;
+        }
+    }
+}

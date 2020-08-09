@@ -12,11 +12,17 @@
 
 {% block content %}
     <div class="btn-container">
-        <a href="/products/{{prev}}/" class="prev-btn">prev</a>{{num}}<a href="/products/{{next}}" class="next-btn">next</a>
+        {% if products.has_previous %}
+            <a href="?page={{products.previous_page_number}}" class="prev-btn">prev</a>
+        {% endif %}
+        {{num}}
+        {% if products.has_next %}
+            <a href="?page={{products.next_page_number}}" class="next-btn">next</a>
+        {% endif %}
     </div>
     <h2 class="popular-title">Products</h2>
     <div class="popular-product-card-container">
-<!--         {% for product in products %}
+        {% for product in products.object_list %}
             <div class="product-card">
                 <img src="{{product.image.url}}"  class='product-card-img' alt="product image" srcset="">
                 <div class="decoration"></div>
@@ -32,7 +38,7 @@
                     </form>
                 </div>
             </div>
-        {% endfor %} -->
+        {% endfor %}
     </div>
 
 {% endblock %}
