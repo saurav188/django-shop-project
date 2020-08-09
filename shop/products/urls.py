@@ -3,6 +3,6 @@ from products import views
 
 urlpatterns = [
     path('', views.home),
-    path('/products/', views.products),
-    path('/product/', views.product),
+    path('products/', views.products),
+    path('product/product_id=<pk>', views.product),
 ]

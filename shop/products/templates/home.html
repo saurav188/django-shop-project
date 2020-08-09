@@ -10,19 +10,21 @@
 {% endblock %}
 
 {% block content %}
-    <div class="slide-container">
-<!--         {% for banner in banners %}
-                <img class="slides" src="{{banner.banner.url}}" alt="banner" id="img{{banner.id}}" data-no={{banner.id}}>
-        {% endfor %} -->
-    </div>
-    <div class="row">
-<!--         {% for banner in banners %}
-        <div id="dot{{banner.id}}" class="dot dark" data-no="{{banner.id}}"></div>
-        {% endfor %} -->
+    <div class="description-container">
+        <h1 class="title">An django ecommerce website</h1>
+        <p class="description">This app has following features:</p>
+        <ul class="features">
+            <li>user registration,login,logout.</li>
+            <li>user fields like prfile pics,address.</li>
+            <li>CRUD functionality in cart.</li>
+            <li>Giving Reviews.</li>
+            <li>Paginated list of products.</li>
+            <li>User change password,edit prfile(CRUD).</li>
+        </ul>
     </div>
     <h2 class="popular-title">Products</h2>
     <div class="popular-product-card-container">
- <!--        {% for product in products %}
+        {% for product in products %}
                 <div class="product-card">
                     <img src="{{product.image.url}}"  class='product-card-img' alt="product image" srcset="">
                     <div class="decoration"></div>
@@ -38,7 +40,7 @@
                         </form>
                     </div>
                 </div>
-        {% endfor %} -->
+        {% endfor %}
         <div class="more-container">
             <a class="more-product" href="/products/1/">More Products</a>
         </div>
