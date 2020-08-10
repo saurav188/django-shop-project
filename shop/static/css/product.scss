@@ -100,10 +100,9 @@
         padding: 2.5% 5% 2.5% 5%;
         margin-bottom: 25px;
 
-        input[type='radio']{
-            &:checked{
-                color: $title_color;
-            }
+        select{
+            background: transparent;
+            border: 0.2px solid $title_color;
         }
 
         label{
@@ -134,6 +133,7 @@
             cursor: pointer;
             border: none;
             background-color: $bg2;
+            border: 0.4px solid $nav_bg;
             color: $title_color;
             padding: 7.5px;
             border-radius: 5px;

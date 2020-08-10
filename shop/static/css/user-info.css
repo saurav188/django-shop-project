@@ -424,6 +424,7 @@ footer img {
   border-bottom: 1px solid black;
   -webkit-transition: 200ms;
   transition: 200ms;
+  width: 75px;
 }
 
 .cart-products .item-quantity input[type='number']:focus {
@@ -528,6 +529,7 @@ footer img {
   border-bottom: 3px solid white;
   color: #606060FF;
   font-weight: bolder;
+  font-size: 1.2rem;
 }
 
 .delivered-items table .delivered-item {
@@ -645,28 +647,35 @@ footer img {
 }
 
 @media screen and (max-width: 530px) {
-  .edit-info-btn {
-    -webkit-transform: translateY(-40px);
-            transform: translateY(-40px);
+  .user-info .img-container {
+    height: 200px;
+    width: 162px;
+    border: 2px solid white;
+    margin-bottom: 5vh;
+  }
+  .user-info .descrip {
+    height: 300px;
+    width: 90vw;
+    margin-top: 30vh;
+  }
+  .user-info .descrip .edit-info-btn {
+    margin: 0px auto 0px auto;
   }
   .cart-products table {
-    width: 80vw;
+    width: 90vw;
   }
-  .cart-products table .cart-item .item-quantity input {
-    width: 100px;
+  .cart-products table .cart-item .item-quantity input[type='number'] {
+    width: 50px;
   }
-  .pending-items table {
-    width: 87.5vw;
+  .pending-items table, .delivered-items table {
+    width: 90vw;
   }
-  .delivered-items table {
-    width: 87.5vw;
+  .pending-items table .title-row th, .delivered-items table .title-row th, .cart-products table .title-row th {
+    font-weight: lighter;
+    font-size: 0.8rem;
   }
-}
-
-@media screen and (max-width: 474px) {
-  .edit-info-btn {
-    -webkit-transform: translateY(-90px);
-            transform: translateY(-90px);
+  .pending-items table .delivered-items, .pending-items table .pending-items, .pending-items table .cart-item, .delivered-items table .delivered-items, .delivered-items table .pending-items, .delivered-items table .cart-item, .cart-products table .delivered-items, .cart-products table .pending-items, .cart-products table .cart-item {
+    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=user-info.css.map */

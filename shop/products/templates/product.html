@@ -31,44 +31,22 @@
         {% endif %}
         <p class="product-des"> {{product.produuct_description}}</p>
     </div>
-    <!--<div class="reviews">
-        
+    <div class="reviews">    
         <h3 class="review-title">Reviews</h3>   
-
         {% if order_placed %}
             {% if this_review %}
                 <h5>{{user.first_name}} {{user.last_name}}</h5>
                 <form class='review-form' action="" method="POST">
                     {% csrf_token %}
-                        <input type="radio" id="Very Bad" name="score" value="Very Bad">
-                            <label for="Very Bad">Very Bad</label>
-                        <input type="radio" id="Bad" name="score" value="Bad">
-                            <label for="Bad">Bad</label>
-                        <input type="radio" id="Good Enough" name="score" value="Good Enough">
-                            <label for="Good Enough">Good Enough</label>
-                        <input type="radio" id="Good" name="score" value="Good">
-                            <label for="Good">Good</label>
-                        <input type="radio" id="Amazing" name="score" value="Amazing">
-                            <label for="Amazing">Amazing</label>
-                        <textarea name="comment" id="comment" cols="112.5" rows="10">{{this_review.comment}}</textarea><br>
-                        <input type="submit" name='btn' value="Edit Review">
+                    {{editreview.as_p}}   
+                    <input type="submit" name='btn' value="Edit Review">
                 </form>
             {% else %}
                 <h5>{{user.first_name}} {{user.last_name}}</h5>
                 <form class='review-form' action="" method="POST">
                     {% csrf_token %}
-                        <input type="radio" id="Very Bad" name="score" value="Very Bad">
-                            <label for="Very Bad">Very Bad</label>
-                        <input type="radio" id="Bad" name="score" value="Bad">
-                            <label for="Bad">Bad</label>
-                        <input type="radio" id="Good Enough" name="score" value="Good Enough" checked>
-                            <label for="Good Enough">Good Enough</label>
-                        <input type="radio" id="Good" name="score" value="Good">
-                            <label for="Good">Good</label>
-                        <input type="radio" id="Amazing" name="score" value="Amazing">
-                            <label for="Amazing">Amazing</label>
-                        <textarea name="comment" id="comment" cols="112.5" rows="10">Your reviw here..</textarea><br>
-                        <input type="submit" name='btn' value="Post Review">
+                    {{givereview.as_p}}
+                    <input type="submit" name='btn' value="Post Review">
                 </form>
             {% endif %}
             <hr class="review-divider">
@@ -77,11 +55,11 @@
         {% for review in reviews %} 
               <div class="review">
                   <h4>{{review.score}}</h4>
-                  <h6>-by {{review.reviewer.user.first_name}} {{review.reviewer.user.last_name}}</h6>
+                  <h6>-by {{review.reviewer.first_name}} {{review.reviewer.last_name}}</h6>
                   <p>{{review.comment}}</p>
               </div>
         {% endfor %}       
-    </div> -->
+    </div>
 {% endblock %}
 
 {% block javascript %}

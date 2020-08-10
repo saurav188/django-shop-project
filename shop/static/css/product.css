@@ -288,7 +288,7 @@ footer img {
 
 .errorlist li {
   color: red;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .description {
@@ -404,8 +404,9 @@ footer img {
   margin-bottom: 25px;
 }
 
-.reviews .review-form input[type='radio']:checked {
-  color: #D6ED17FF;
+.reviews .review-form select {
+  background: transparent;
+  border: 0.2px solid #D6ED17FF;
 }
 
 .reviews .review-form label {
@@ -435,6 +436,7 @@ footer img {
   cursor: pointer;
   border: none;
   background-color: #606060FF;
+  border: 0.4px solid black;
   color: #D6ED17FF;
   padding: 7.5px;
   border-radius: 5px;

@@ -26,3 +26,20 @@ class order(models.Model):
 
     def __str__(self):
         return str(self.quantity)+" "+self.customer.first_name + ' ordering ' + self.product.product_name+' is '+self.status
+
+class review(models.Model):
+    score_choices=(
+        ('Very Bad','Very Bad'),
+        ('Bad','Bad'),
+        ('Good Enough','Good Enough'),
+        ('Good','Good'),
+        ('Amazing','Amazing')
+    )
+    product=models.ForeignKey(product,on_delete=models.CASCADE)
+    reviewer=models.ForeignKey(User,on_delete=models.CASCADE)
+    score=models.CharField(max_length=200,choices=score_choices,default='Good Enough')
+    comment=models.CharField(max_length=2000,null=True)
+
+    def __str__(self):
+        return self.reviewer.first_name + ' reviewing ' + self.product.product_name
+       
