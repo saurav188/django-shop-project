@@ -35,6 +35,10 @@
                 animation-name: underliner;
                 animation-duration: 350ms;
             }
+    } 
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none;
     }
     input[type=submit]{
         cursor: pointer;

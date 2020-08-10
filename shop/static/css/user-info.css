@@ -288,7 +288,7 @@ footer img {
 
 .errorlist li {
   color: red;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .user-info {
@@ -429,11 +429,6 @@ footer img {
 .cart-products .item-quantity input[type='number']:focus {
   color: #D6ED17FF;
   border-bottom: 2px solid #D6ED17FF;
-}
-
-.cart-products .item-quantity input[type=number]::-webkit-inner-spin-button,
-.cart-products .item-quantity input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
 }
 
 .cart-products .cart-btn {

@@ -288,7 +288,7 @@ footer img {
 
 .errorlist li {
   color: red;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .registration-form {
@@ -337,6 +337,11 @@ footer img {
           animation-name: underliner;
   -webkit-animation-duration: 350ms;
           animation-duration: 350ms;
+}
+
+.registration-form input[type=number]::-webkit-inner-spin-button,
+.registration-form input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 .registration-form input[type=submit] {

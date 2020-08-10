@@ -21,8 +21,7 @@
         <form action="" method="POST">
             {% csrf_token %}
             <label for="quantity-product">Quantity:</label>
-            <input type="number" name="quantity-product" class="quantity-product">
-            <input type="hidden" name="product-id-value" value="{{product.id}}">
+            <input type="number" name="quantity-product" class="quantity-product" value=1>
             <input type="submit" name="btn" value="Add to Cart">
         </form>
         {% if messages %}
