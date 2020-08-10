@@ -12,44 +12,11 @@
 {% block content %}
     <div class="registration-form">
         <h3>Register Here!!</h3>
-        <form action="register" method="POST">
-
+        <form action="" method="POST">
             {% csrf_token %}
-
-            <label for="user_name">User Name:</label>
-                <input type="text" name="user_name" placeholder="User_Name"><br><br>
-
-            <label for="first_name">First Name:</label>
-                <input type="text" name="first_name" placeholder="First_Name"><br><br>
-
-            <label for="last_name">Last Name:</label>
-                <input type="text" name="last_name" placeholder="Last_Name"><br><br>
-
-            <label for="email">Email:</label>
-                <input type="text" name="email" placeholder="Email"><br><br>
-
-            <label for="password">Password:</label>
-                <input type="password" name="password" placeholder="Password"><br><br>
-
-            <label for="re_password">Confirm Password:</label>
-                <input type="password" name="re_password" placeholder="Confirm Password"><br><br>
-
-            <label for="profile_pic">Profile Picture:</label>
-                <input type="file" name="profile_pic" accept="image/*" placeholder="Profile Picture"><br><br>
-
-            <label for="phone_no">Phone no:</label>
-                <input type="number" name="phone_no" placeholder="Phone no"><br><br>
-
+            {{form.as_p}}
             <input type="submit" value="Register">
-
         </form>
-        {% if messages %}
-            <ul class="messages">
-                    {% for message in messages %}
-                        <li class="message">{{message}}</li>
-                    {% endfor %}
-            </ul>
-        {% endif %}
     </div>
 {% endblock %}
 

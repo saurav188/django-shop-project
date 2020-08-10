@@ -23,11 +23,11 @@
             </div>
             <div class="user-options">
                 {% if user.is_authenticated %}
-                    <div class="name"><a href="/user/">{{user.first_name}}</a></div>
-                    <div class="logout"><a href="/logout">Logout</a></div>
+                    <div class="name"><a href="/user/user_info/">{{user.first_name}}</a></div>
+                    <div class="logout"><a href="/user/logout/">Logout</a></div>
                 {% else %}
-                    <div class="register"><a href="/register">Register</a></div>
-                    <div class="login" ><a href="/login/">Login</a></div>
+                    <div class="register"><a href="/user/register/">Register</a></div>
+                    <div class="login" ><a href="/user/login/">Login</a></div>
                 {% endif %}
             </div>
             <div class="bars">

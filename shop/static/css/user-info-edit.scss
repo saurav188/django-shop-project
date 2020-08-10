@@ -16,10 +16,11 @@
         color: $title_color;
     }
     label{
-        color: $title_color;
+        color: $nav_bg;
         font-size: 1rem;
     }
-    input[type=text],input[type=password],input[type=number]{
+    input[type=text],input[type=password],
+    input[type=number],input[type=email]{
         border: none;
         width: 225px;
         height: 25px;
@@ -73,7 +74,7 @@ textarea:focus, input:focus{
 
     a{
         text-decoration: none;
-        color: $title_color;
+        color: $nav_bg;
 
         &:hover{
             border-bottom: 1px solid $title_color;

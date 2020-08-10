@@ -12,26 +12,10 @@
 {% block content %}
 <div class="registration-form">
     <h3>Edit user info</h3>
-    <form action="" method="POST">
+    <form action="" enctype='multipart/form-data' method="POST">
 
         {% csrf_token %}
-
-        <label for="first_name">First Name:</label>
-            <input type="text" name="first_name" placeholder="First_Name" value="{{edit_user.user.first_name}}"><br><br>
-
-        <label for="last_name">Last Name:</label>
-            <input type="text" name="last_name" placeholder="Last_Name" value="{{edit_user.user.last_name}}"><br><br>
-
-        <label for="profile_pic">Profile Picture:</label>
-            <input type="file" name="profile_pic" accept="image/*" placeholder="Profile Picture" value="{{edit_user.profile_picture}}"><br><br>
-
-        <label for="phone_no">Phone no:</label>
-            <input type="number" name="phone_no" placeholder="Phone no" value="{{edit_user.phone_no}}"><br><br>
-
-        <label for="password">Password:</label>
-            <input type="password" name="password" placeholder="Password" value=""><br><br>
-
-
+        {{ form.as_p }}
         <input type="submit" value="Save Change">
 
     </form>

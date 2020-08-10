@@ -282,6 +282,15 @@ footer img {
   }
 }
 
+.errorlist {
+  list-style: none;
+}
+
+.errorlist li {
+  color: red;
+  font-size: 1.5rem;
+}
+
 .registration-form {
   margin-top: 65px;
   padding-left: 5%;
@@ -306,11 +315,12 @@ footer img {
 }
 
 .registration-form label {
-  color: #D6ED17FF;
+  color: black;
   font-size: 1rem;
 }
 
-.registration-form input[type=text], .registration-form input[type=password], .registration-form input[type=number] {
+.registration-form input[type=text], .registration-form input[type=password],
+.registration-form input[type=number], .registration-form input[type=email] {
   border: none;
   width: 225px;
   height: 25px;
@@ -318,7 +328,8 @@ footer img {
   border-bottom: 1px solid black;
 }
 
-.registration-form input[type=text]:focus, .registration-form input[type=password]:focus, .registration-form input[type=number]:focus {
+.registration-form input[type=text]:focus, .registration-form input[type=password]:focus,
+.registration-form input[type=number]:focus, .registration-form input[type=email]:focus {
   color: black;
   border-bottom: 3px solid black;
   padding-bottom: 3px;
@@ -372,7 +383,7 @@ textarea:focus, input:focus {
 
 .change-password a {
   text-decoration: none;
-  color: #D6ED17FF;
+  color: black;
 }
 
 .change-password a:hover {

@@ -281,4 +281,13 @@ footer img {
     padding-top: 2vh;
   }
 }
+
+.errorlist {
+  list-style: none;
+}
+
+.errorlist li {
+  color: red;
+  font-size: 1rem;
+}
 /*# sourceMappingURL=style.css.map */

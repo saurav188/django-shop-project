@@ -1,20 +1,25 @@
 from django.shortcuts import render,redirect
 from user.models import User
-from django.contrib.auth.models import User,auth
+from django.contrib.auth.models import auth
 from django.contrib import messages
-from django.contrib.auth import update_session_auth_hash
-from django.contrib.auth.forms import PasswordChangeForm,UserChangeForm,UserCreationForm
+from django.contrib.auth.forms import PasswordChangeForm
 from django.core.paginator import Paginator
-
+from user.forms import user_registration_form,user_info_edit
 # Create your views here.
 
 def register(request):
     if request.method=='POST':
-        pass
+        form=user_registration_form(request.POST)
+        if form.is_valid():
+            form.save()
+            redirect('/')
     else:
-        context={  
-        } 
-        return render(request,'register.html',context)
+        form=user_registration_form()
+
+    context={  
+        "form":form
+    } 
+    return render(request,'register.html',context)
 
 def login(request):
     context={
@@ -22,15 +27,13 @@ def login(request):
     if request.method=='POST':
         User_name=request.POST['user_name']
         password=request.POST['password']
-
         user=auth.authenticate(username=User_name,password=password)
-
         if user is not None:
             auth.login(request,user)
             return redirect('/')
         else:
             messages.info(request,"Wrong info.Try again")
-            return redirect('/login/')
+            return redirect('/user/login/')
 
     else:
         return render(request,'login.html',context)
@@ -50,10 +53,20 @@ def user_info(request):
         pass
 
 def edituserinfo(request):
-    context={
-        'edit_user':request.user
-    }
     if request.user.is_authenticated:
+        if request.method=="POST":
+            form=user_info_edit(request.POST,instance=request.user)
+            if form.is_valid():
+                form.save()
+                form=user_info_edit(instance=request.user)
+                redirect('/user/user_info')
+        else:
+            form=user_info_edit(instance=request.user)
+
+        context={
+            'edit_user':request.user,
+            'form':form
+        }
         return render(request,'user_info_edit.html',context)
     else:
         pass
@@ -65,7 +78,7 @@ def change_password(request):
             user = form.save()
             update_session_auth_hash(request, user)
             messages.success(request, 'Your password was successfully updated!')
-            return redirect('/user')
+            return redirect('/user/user_info')
         else:
             messages.error(request, 'Please correct the error below.')
     else:

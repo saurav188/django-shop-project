@@ -282,6 +282,15 @@ footer img {
   }
 }
 
+.errorlist {
+  list-style: none;
+}
+
+.errorlist li {
+  color: red;
+  font-size: 1.5rem;
+}
+
 .user-info {
   padding-left: 5%;
   padding-right: 5%;

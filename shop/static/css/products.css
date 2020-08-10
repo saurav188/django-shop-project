@@ -282,6 +282,15 @@ footer img {
   }
 }
 
+.errorlist {
+  list-style: none;
+}
+
+.errorlist li {
+  color: red;
+  font-size: 1.5rem;
+}
+
 .popular-title {
   background-color: #606060FF;
   margin-top: 130px;

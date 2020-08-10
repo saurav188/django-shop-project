@@ -282,6 +282,15 @@ footer img {
   }
 }
 
+.errorlist {
+  list-style: none;
+}
+
+.errorlist li {
+  color: red;
+  font-size: 1rem;
+}
+
 .login-container {
   background-color: #606060FF;
   width: 350px;
@@ -360,5 +369,18 @@ footer img {
 
 .create a:hover {
   border-bottom: black solid 1px;
+}
+
+.messages {
+  position: absolute;
+  top: 30vh;
+  left: 70vw;
+  border: 1px solid #ec2828;
+  padding: 5vh 1vw 5vh 1vw;
+}
+
+.messages li {
+  list-style: none;
+  color: #ec2828;
 }
 /*# sourceMappingURL=login.css.map */

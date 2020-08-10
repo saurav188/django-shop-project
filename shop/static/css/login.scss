@@ -72,3 +72,16 @@
         }
     }
 }
+
+.messages{
+    position: absolute;
+    top: 30vh;
+    left: 70vw;
+    border: 1px solid rgb(236, 40, 40);
+    padding: 5vh 1vw 5vh 1vw;
+    
+    li{
+        list-style: none;
+        color: rgb(236, 40, 40);
+    }
+}

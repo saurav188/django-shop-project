@@ -250,3 +250,10 @@ footer{
         }
     }
 }
+.errorlist{
+    list-style: none;
+    li{
+        color: red;
+        font-size: 1rem;
+    }
+}
