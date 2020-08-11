@@ -89,7 +89,7 @@ def user_info(request):
 def edituserinfo(request):
     if request.user.is_authenticated:
         if request.method=="POST":
-            form=user_info_edit(request.POST,instance=request.user)
+            form=user_info_edit(request.POST,request.FILES or None,instance=request.user)
             if form.is_valid():
                 form.save()
                 form=user_info_edit(instance=request.user)

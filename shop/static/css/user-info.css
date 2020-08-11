@@ -655,20 +655,20 @@ footer img {
   }
   .user-info .descrip {
     height: 300px;
-    width: 90vw;
+    width: 85vw;
     margin-top: 30vh;
   }
   .user-info .descrip .edit-info-btn {
     margin: 0px auto 0px auto;
   }
   .cart-products table {
-    width: 90vw;
+    width: 85vw;
   }
   .cart-products table .cart-item .item-quantity input[type='number'] {
     width: 50px;
   }
   .pending-items table, .delivered-items table {
-    width: 90vw;
+    width: 85vw;
   }
   .pending-items table .title-row th, .delivered-items table .title-row th, .cart-products table .title-row th {
     font-weight: lighter;
