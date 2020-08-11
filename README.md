@@ -1,5 +1,5 @@
 # djago-shop-project
-This app has following features:
+This website has following features:
     User registration,login,logout,change password,edit prfile.
     User fields added=> phone no,profile pics and address.
     CRUD functionality in cart.
