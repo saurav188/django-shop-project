@@ -1,2 +1,7 @@
 # djago-shop-project
-An shop project with user login capabilities,multiple orders.
+This app has following features:
+    User registration,login,logout,change password,edit prfile.
+    User fields added=> phone no,profile pics and address.
+    CRUD functionality in cart.
+    Giving Reviews.
+    Paginated list of products.
