@@ -288,7 +288,7 @@ footer img {
 
 .errorlist li {
   color: red;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .popular-title {
@@ -314,7 +314,7 @@ footer img {
   opacity: 0.8;
   background-color: #606060FF;
   position: fixed;
-  top: 65px;
+  top: 62.5px;
   z-index: 10;
   color: #D6ED17FF;
 }

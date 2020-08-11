@@ -14,7 +14,7 @@ def register(request):
         form=user_registration_form(request.POST)
         if form.is_valid():
             form.save()
-            redirect('/')
+            return redirect('/user/login/')
     else:
         form=user_registration_form()
 

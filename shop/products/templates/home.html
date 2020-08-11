@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    <title>this is title</title>
+    <title>Django shop project</title>
 {% endblock %}
 
 {% block css %}
@@ -14,12 +14,11 @@
         <h1 class="title">An django ecommerce website</h1>
         <p class="description">This app has following features:</p>
         <ul class="features">
-            <li>user registration,login,logout.</li>
-            <li>user fields like prfile pics,address.</li>
+            <li>User registration,login,logout,change password,edit prfile.</li>
+            <li>User fields added=> phone no,profile pics and address.</li>
             <li>CRUD functionality in cart.</li>
             <li>Giving Reviews.</li>
             <li>Paginated list of products.</li>
-            <li>User change password,edit prfile(CRUD).</li>
         </ul>
     </div>
     <h2 class="popular-title">Products</h2>
@@ -41,6 +40,7 @@
                     </div>
                 </div>
         {% endfor %}
+        <br>
         <div class="more-container">
             <a class="more-product" href="/products/">More Products</a>
         </div>

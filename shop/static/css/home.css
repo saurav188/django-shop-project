@@ -288,64 +288,16 @@ footer img {
 
 .errorlist li {
   color: red;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
-.slides {
-  height: auto;
-  width: 100%;
-}
-
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
-.slide-container {
+.description-container {
   margin-top: 65px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 80vh;
-  width: 100vw;
-  overflow: hidden;
+  padding: 5%;
 }
 
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  background-color: #606060FF;
-  margin-right: 25px;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-}
-
-.dot:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  background-color: black;
-  -webkit-box-shadow: black 2px 2px 10px;
-          box-shadow: black 2px 2px 10px;
-}
-
-.row {
-  margin-top: 19.25px;
-  margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.dark {
-  background-color: black;
+.description-container .title {
+  font-size: 1.5rem;
 }
 
 .popular-title {
@@ -386,7 +338,10 @@ footer img {
 }
 
 .popular-product-card-container .more-container {
+  text-align: center;
   margin-bottom: 45px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .popular-product-card-container .more-container .more-product {

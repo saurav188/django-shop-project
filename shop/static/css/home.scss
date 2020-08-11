@@ -1,46 +1,14 @@
 @import './style.scss';
 
-.slides{
-    height: auto;
-    width: 100%;
-}
-.hide{
-    display: none;
-}
-.show{
-    display: block;
-}
-.slide-container{
+.description-container{
     margin-top: 65px;
-    display: flex;
-    height: 80vh;
-    width: 100vw;
-    overflow: hidden;
-}
-.dot{
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: $bg2;
-    margin-right: 25px;
-    transition: 300ms;
-    &:hover{
-        transform: scale(1.2);
-        background-color: $nav_bg;
-        box-shadow: $nav_bg 2px 2px 10px;
+    padding: $padding_length;
+
+    .title{
+        font-size: 1.5rem;
     }
 }
-.row{
-    margin-top: 19.25px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-}
 
-.dark{
-    background-color:$nav_bg;
-}
 .popular-title{
     margin-left: $padding_length;
     margin-right: $padding_length;
@@ -71,7 +39,9 @@
         text-decoration: none;
     }
     .more-container{
+        text-align: center;
         margin-bottom: 45px;
+        flex-basis: 100%;
 
         .more-product{
             color: $title_color;
