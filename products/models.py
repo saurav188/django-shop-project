@@ -42,4 +42,3 @@ class review(models.Model):
 
     def __str__(self):
         return self.reviewer.first_name + ' reviewing ' + self.product.product_name
-       
