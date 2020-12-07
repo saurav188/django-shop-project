@@ -7,7 +7,6 @@ from django.contrib.auth.forms import PasswordChangeForm,UserChangeForm
 from django.core.paginator import Paginator
 from products.forms import givereview
 
-all_product= product.objects.all()
 def select_six(all_products):
     result=[]
     if all_products.count()>=6:
@@ -22,7 +21,6 @@ def addtocart(request,product_qtn,product_id):
     item=order(customer=user,product=product.objects.get(id=product_id),status='In Cart',quantity=product_qtn)
     item.save()
 # Create your views here.
-selected_six=select_six(all_product)
 def home(request):
     if request.method=='POST':
         if request.user.is_authenticated:
@@ -33,7 +31,7 @@ def home(request):
             return redirect('/user/login')
 
     context={
-        "products":selected_six
+        "products":select_six(product.objects.all())
     }
     return render(request,'home.html',context)
 
@@ -105,7 +103,7 @@ def products(request):
         page_number=1
     try:
         page = paginator.get_page(page_number)
-    except(EmptyPage, InvalidPage):
+    except:
         page = paginator.get_page(paginator.num_pages)
     
     context={

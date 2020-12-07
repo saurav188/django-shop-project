@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'ohjg1z1ypazo+f-ua%ru2#c9%x_)8*o!e(l8b-s#187=1xsegp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['django-shop-app.herokuapp.com','localhost']
 
@@ -80,11 +80,15 @@ WSGI_APPLICATION = 'shop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'davq7id8vmrris',
+        'HOST':'ec2-52-203-165-126.compute-1.amazonaws.com',
+        'PORT':5432,
+        'USER':'ocatkirnludbcv',
+        'PASSWORD':'d0cbd1e8c45e581f0d15ee19f8bd4deb55bf7aff01de007f45f0c3ea5e00f93a'
     }
 }
-
+#postgres://ocatkirnludbcv:d0cbd1e8c45e581f0d15ee19f8bd4deb55bf7aff01de007f45f0c3ea5e00f93a@ec2-52-203-165-126.compute-1.amazonaws.com:5432/davq7id8vmrris
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

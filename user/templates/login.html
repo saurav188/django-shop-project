@@ -11,13 +11,14 @@
 
 {% block content %}
     <div class="login-container">
+        <p style="margin:4px 0px 0px 14px">credentions are already placed, just click login</p> 
         <form action="" method="POST">
             {% csrf_token %}
             <label for="user_name">User Name:</label>
-                <input type="text" name="user_name" placeholder="User_Name"><br><br>
+                <input type="text" name="user_name" placeholder="User_Name" value="guest"><br><br>
 
             <label for="password">Password:</label>
-                <input type="password" name="password" placeholder="Password"><br><br>
+                <input type="password" name="password" placeholder="Password" value="ghty675F"><br><br>
 
             <input type="submit" value="login">
         </form>

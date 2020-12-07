@@ -23,7 +23,7 @@
             </div>
             <div class="user-options">
                 {% if user.is_authenticated %}
-                    <div class="name"><a href="/user/user_info">{{user.first_name}}</a></div>
+                    <div class="name"><a href="/user/user_info">{{user.username}}</a></div>
                     <div class="logout"><a href="/user/logout">Logout</a></div>
                 {% else %}
                     <div class="register"><a href="/user/register">Register</a></div>
