@@ -84,10 +84,10 @@ def product_view(request,pk):
         "order_placed":order_placed,
         "reviews":review.objects.filter(product_id=pk)
     }
-    print(this_review)
     return render(request,'product.html',context)
 
 def products(request):
+    all_product=product.objects.all()
     if request.method=='POST':
         if request.user.is_authenticated:
             product_id=request.POST['product_id']
